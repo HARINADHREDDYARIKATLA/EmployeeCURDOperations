@@ -1,0 +1,115 @@
+************ Register employee (Save)***********
+
+Request
+
+curl --location --request POST 'http://localhost:2022/myapp/emp/save?firstName=hari&lastName=reddy&mobileNumber=4567&address=andhra&department=it'
+
+
+Response
+{
+    "userId": 1,
+    "firstName": "hari",
+    "lastName": "reddy",
+    "mobileNumber": "4567",
+    "address": "andhra",
+    "department": "it"
+}
+
+
+
+Request
+
+curl --location --request POST 'http://localhost:2022/myapp/emp/save?firstName=Srinu&lastName=Naidu&mobileNumber=2345&address=Chennai&department=ECE'
+
+Response
+
+{
+    "userId": 2,
+    "firstName": "Srinu",
+    "lastName": "Naidu",
+    "mobileNumber": "2345",
+    "address": "Chennai",
+    "department": "ECE"
+}
+
+
+
+**********************************************
+
+
+
+******************Get All Employees **********
+
+Request
+
+curl --location --request GET 'http://localhost:2022/myapp/emp/all'
+
+Response
+
+[
+    {
+        "userId": 1,
+        "firstName": "hari",
+        "lastName": "reddy",
+        "mobileNumber": "4567",
+        "address": "acf",
+        "department": "it"
+    },
+    {
+        "userId": 2,
+        "firstName": "Srinu",
+        "lastName": "Naidu",
+        "mobileNumber": "2345",
+        "address": "Chennai",
+        "department": "ECE"
+    },
+    {
+        "userId": 3,
+        "firstName": "Ashok",
+        "lastName": "Chowdary",
+        "mobileNumber": "8767",
+        "address": "Banglore",
+        "department": "CSE"
+    }
+]
+
+*******************************************************
+
+
+
+
+*****************Update Employee **********************
+
+Request
+
+curl --location --request PATCH 'http://localhost:2022/myapp/emp/update/1?firstName=Harinadh'
+
+Response
+
+{
+    "userId": 1,
+    "firstName": "Harinadh",
+    "lastName": "reddy",
+    "mobileNumber": "4567",
+    "address": "andhra",
+    "department": "it"
+}
+
+********************************************************
+
+
+
+
+*************Delte Employee*****************************
+
+Request
+
+curl --location --request DELETE 'http://localhost:2022/myapp/emp/delete/1'
+
+Response
+
+Employee Deleted Successfully
+
+
+
+********************************************************
